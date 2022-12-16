@@ -6,3 +6,4 @@ let pokemonList = [
     {name: 'Eevee', height: 0.3, type: ['Normal']},
     {name: 'Jolteon', height: 0.8, type: ['Electric']},
 ]
+//let has error- why?
