@@ -7,12 +7,12 @@ let pokemonList = [
     {name: 'Jolteon', height: 0.8, type: ['Electric']},
 ];
 
-for (let i=0; i < height.length; i++){
+for (let i = 0; i < pokemonList.length; i++){
     if (height[i].height <0.9) && height[i].height >0.6)
-    console.log(height[i].bulbasaur + " Is tall ")
+    document.write(height[i].bulbasaur + " Is tall ")
 }else if (height[i].height <0.6){
-    console.log(height[i].bulbasaur + " Is short ")
+    document.write(height[i].bulbasaur + " Is short ")
 }else {
-    console.log(height[i].bulbasaur + " Wow, that's big! ")
+    document.write(height[i].bulbasaur + " Wow, that's big! ")
 }
 //let has error- why?
