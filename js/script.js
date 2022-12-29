@@ -5,5 +5,14 @@ let pokemonList = [
     {name: 'Vulpix', height: 0.6, type: ['Fire']},
     {name: 'Eevee', height: 0.3, type: ['Normal']},
     {name: 'Jolteon', height: 0.8, type: ['Electric']},
-]
+];
+
+for (let i=0; i < height.length; i++){
+    if (height[i].height <0.9) && height[i].height >0.6)
+    console.log(height[i].bulbasaur + " Is tall ")
+}else if (height[i].height <0.6){
+    console.log(height[i].bulbasaur + " Is short ")
+}else {
+    console.log(height[i].bulbasaur + " Wow, that's big! ")
+}
 //let has error- why?
