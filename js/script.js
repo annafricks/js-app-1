@@ -1,4 +1,4 @@
-let pokemonList = [
+const pokemonList = [
     {name: 'Bulbasaur', height: 0.7, type: ['Grass', 'Poison']},
     {name: 'Squirtle', height: 0.5, type: ['Water']},
     {name: 'Charmander', height: 0.6, type: ['Fire']},
@@ -7,12 +7,11 @@ let pokemonList = [
     {name: 'Jolteon', height: 0.8, type: ['Electric']},
 ];
 
-for (let i = 0; i < pokemonList.length; i++){
-    if (height[i].height <0.9) && height[i].height >0.6)
-    document.write(height[i].bulbasaur + " Is tall ")
-}else if (height[i].height <0.6){
-    document.write(height[i].bulbasaur + " Is short ")
-}else {
-    document.write(height[i].bulbasaur + " Wow, that's big! ")
+for (const i = 0; i < pokemonList.length; i++){
+    if (height[i].height <=0.6) && (height[i].height >=0.7)
+    document.write(height[i].pokemonList + " Is tall ")
+} else if { (height[i].height <=0.5) && (height[i].height >0.1)
+    document.write(height[i].pokemonList + " Is short ")
+} else {  (height[i].height >=0.8)
+    document.write(height[i].pokemonList + " Wow, that's big! ")
 }
-//let has error- why?
