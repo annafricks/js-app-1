@@ -7,11 +7,11 @@ const pokemonList = [
     {name: 'Jolteon', height: 0.8, type: ['Electric']},
 ];
 
-for (const i = 0; i < pokemonList.length; i++){
-    if (height[i].height <=0.6) && (height[i].height >=0.7)
+for (const i = 0; i < pokemonList.height; i++) {
+    if ( pokemonList[i].height <=0.6 ) && ( pokemonList[i].height >=0.7 ) {
     document.write(height[i].pokemonList + " Is tall ")
-} else if { (height[i].height <=0.5) && (height[i].height >0.1)
-    document.write(height[i].pokemonList + " Is short ")
-} else {  (height[i].height >=0.8)
-    document.write(height[i].pokemonList + " Wow, that's big! ")
+} else if (pokemonList[i].height <=0.5 && pokemonList[i].height >0.1) {
+    (document.write(height[i].pokemonList + " Is short " )
+} else { pokemonList[i].height >=0.8
+    document.write(height[i].pokemonList + " Wow, that's big! " ) }
 }
