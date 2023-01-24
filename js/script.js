@@ -36,11 +36,12 @@ function divide(dividend, divisor){
  console.log(divide(1, 4));
  console.log(divide(12, -3));
  
-for (const i = 0; i < pokemonList.height; i++) {
-    if ( pokemonList[i].height <=0.6 ) && ( pokemonList[i].height >=0.7 ) {
-    document.write(height[i].pokemonList + " Is tall ")
-} else if (pokemonList[i].height <=0.5 && pokemonList[i].height >0.1) {
-    (document.write(height[i].pokemonList + " Is short " )
-} else { pokemonList[i].height >=0.8
-    document.write(height[i].pokemonList + " Wow, that's big! " ) }
-}
+for (let i = 0; i < pokemonList.height; i++) {
+    if (pokemonList[i].height >=0.6 && pokemonList[i].height < 1) {
+    document.write(pokemonList[0].name + " (height: " + pokemonList[i].height + ")" + " Is tall ")
+    } else if (pokemonList[i].height < 0.6) {
+    (document.write(pokemonList[4].name + " (height: " + pokemonList[i].height + ")" + " Is short " )
+    } else {
+    document.write(pokemonList[5].name + " (height: " + pokemonList[i].height + ")" + " Wow, that's big! " )
+    }
+    }
