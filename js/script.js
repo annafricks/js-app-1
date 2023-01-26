@@ -38,10 +38,10 @@ function divide(dividend, divisor){
  
 for (let i = 0; i < pokemonList.height; i++) {
     if (pokemonList[i].height >=0.6 && pokemonList[i].height < 1) {
-    document.write(pokemonList[0].name + " (height: " + pokemonList[i].height + ")" + " Is tall ")
+    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " Is tall ")
     } else if (pokemonList[i].height < 0.6) {
-    (document.write(pokemonList[4].name + " (height: " + pokemonList[i].height + ")" + " Is short " )
+    (document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " Is short " )
     } else {
-    document.write(pokemonList[5].name + " (height: " + pokemonList[i].height + ")" + " Wow, that's big! " )
+    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " Wow, that's big! " )
     }
     }
