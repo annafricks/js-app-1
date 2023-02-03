@@ -1,3 +1,4 @@
+let pokemonRepository = function () {
 const pokemonList = [
     {name: 'Bulbasaur', height: 0.7, type: ['Grass', 'Poison']},
     {name: 'Squirtle', height: 0.5, type: ['Water']},
@@ -58,4 +59,22 @@ for (let i = 0; i < pokemonList.height; i++) {
             document.write(pokemon.name + " (height: " + pokemon.height + "m) - Is really big" + "<br>")
         }
     });
-    
+
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+
+    function getAll() {
+        return pokemonList;
+    }
+
+    return {
+        add: add,
+        getAll: getAll
+    };
+})();
+
+
+    pokemonRepository.getAll().forEach(function(pokemon) {
+        document.write(pokemon.name + pokemon.height);
+    });
