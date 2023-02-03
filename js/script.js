@@ -36,6 +36,7 @@ function divide(dividend, divisor){
  console.log(divide(1, 4));
  console.log(divide(12, -3));
  
+ /*before changing to forEach
 for (let i = 0; i < pokemonList.height; i++) {
     if (pokemonList[i].height >=0.6 && pokemonList[i].height < 1) {
     document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " Is tall ")
@@ -45,3 +46,16 @@ for (let i = 0; i < pokemonList.height; i++) {
     document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " Wow, that's big! " )
     }
     }
+    */
+
+    //replacing for loop with forEach loop
+    pokemonList.List.forEach(function(pokemon) {
+        if (pokemon.height >=0.6 && pokemon.height < 1) {
+            document.write(pokemon.name + " (height: " + pokemon.height + "m) - Is tall" + "<br>")
+        } else if (pokemon.height < 0.6) {
+            document.write(pokemon.name + "(height: " + pokemon.height + "m) - Is short" + "<br>")
+        } else {
+            document.write(pokemon.name + " (height: " + pokemon.height + "m) - Is really big" + "<br>")
+        }
+    });
+    
