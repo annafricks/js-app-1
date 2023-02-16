@@ -14,7 +14,7 @@ const pokemonList2 = [
 
 function printArrayDetails(list){
     for ( const i = 0; i < list.length; i++){
-        document.write("<p> + list[i].name + "</p>);
+        document.write('<p>' + list[i].name + '</p>');
         //printing list[i]'s other details
         //...
     }
@@ -75,15 +75,15 @@ for (let i = 0; i < pokemonList.height; i++) {
         button.innerText = "pokemon.name";
         button.classList.add("button-class");
         listpokemon.appendChild(button);
-        pokemonList.appendChild(listpokemon);
-        // listens for a button click and the logs to the console the details 
-        button.addEventListener("click", function(Event) {
+        pokemonList.appendChild(listpokemon); 
+       // listens for a button click and the logs to the console the details  
+      button.addEventListener("click"), function(Event) {
         showDetails(pokemon);
     }
 
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function() {
-            console.log('Name: '+ pokemon.name+ 'Height: '+ pokemon.height+ ' imgUrl: '+ pokemon.imageUrl);
+          console.log('Name: '+ pokemon.name+ 'Height: '+ pokemon.height+ 'imgUrl: '+ pokemon.imageUrl);
         });
     }
 
@@ -94,7 +94,7 @@ for (let i = 0; i < pokemonList.height; i++) {
         getAll: getAll,
         addListItem: addListItem
     };
-})();
+_();
 
 //
     pokemonRepository.getAll().forEach(function(pokemon) {
@@ -109,5 +109,5 @@ for (let i = 0; i < pokemonList.height; i++) {
         pokemonList.appendChild(listpokemon);
         */
        pokemonRepository.addListItem(pokemon);
-
-    });
+    })();
+}}
