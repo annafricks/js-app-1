@@ -79,6 +79,7 @@ for (let i = 0; i < pokemonList.height; i++) {
        // listens for a button click and the logs to the console the details  
       button.addEventListener("click"), function(Event) {
         showDetails(pokemon);
+      }
     }
 
     function showDetails(pokemon) {
@@ -94,7 +95,7 @@ for (let i = 0; i < pokemonList.height; i++) {
         getAll: getAll,
         addListItem: addListItem
     };
-_();
+}();
 
 //
     pokemonRepository.getAll().forEach(function(pokemon) {
@@ -110,4 +111,3 @@ _();
         */
        pokemonRepository.addListItem(pokemon);
     })();
-}}
