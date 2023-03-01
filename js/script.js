@@ -1,5 +1,5 @@
 let pokemonRepository = function () {
-const pokemonList = [
+let pokemonList = [
     {name: 'Bulbasaur', height: 0.7, type: ['Grass', 'Poison']},
     {name: 'Squirtle', height: 0.5, type: ['Water']},
     {name: 'Charmander', height: 0.6, type: ['Fire']},
@@ -8,15 +8,13 @@ const pokemonList = [
     {name: 'Jolteon', height: 0.8, type: ['Electric']},
 ];
 
-const pokemonList2 = [
+let pokemonList2 = [
     //different set of Pokemon objects
 ];
 
 function printArrayDetails(list){
     for ( const i = 0; i < list.length; i++){
         document.write('<p>' + list[i].name + '</p>');
-        //printing list[i]'s other details
-        //...
     }
 }
 //"list" in code above is to be filled- it acts as a placeholder
