@@ -36,18 +36,6 @@ function divide(dividend, divisor){
  console.log(divide(7, 0));
  console.log(divide(1, 4));
  console.log(divide(12, -3));
- 
- /*before changing to forEach
-for (let i = 0; i < pokemonList.height; i++) {
-    if (pokemonList[i].height >=0.6 && pokemonList[i].height < 1) {
-    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " Is tall ")
-    } else if (pokemonList[i].height < 0.6) {
-    (document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " Is short " )
-    } else {
-    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " Wow, that's big! " )
-    }
-    }
-    */
 
     //replacing for loop with forEach loop
     pokemonList.List.forEach(function(pokemon) {
@@ -100,14 +88,5 @@ for (let i = 0; i < pokemonList.height; i++) {
 //
     pokemonRepository.getAll().forEach(function(pokemon) {
         document.write(pokemon.name + pokemon.height);
-        /* moved to function addListItem, replaced with addListItem function call below.
-        let pokemonList = document.querySelector(".pokemon-list");
-        let listpokemon = document.createElement("li");
-        let button = document.createElement("button");
-        button.innerText = "pokemonList.name";
-        button.classList.add("button-class");
-        listpokemon.appendChild(button);
-        pokemonList.appendChild(listpokemon);
-        */
        pokemonRepository.addListItem(pokemon);
     })();
