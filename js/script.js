@@ -11,7 +11,6 @@ function printArrayDetails(list){
 //"list" in code above is to be filled- it acts as a placeholder
 
 printArrayDetails(pokemonList); //executes the function using 'pokemonList' as its input
-printArrayDetails(pokemonList2); //executes the function using 'pokemonList2' as its input
 
 function divide(dividend, divisor){
     if(divisor === 0){
@@ -26,17 +25,6 @@ function divide(dividend, divisor){
  console.log(divide(1, 4));
  console.log(divide(12, -3));
 
-    //replacing for loop with forEach loop
-    pokemonList.List.forEach(function(pokemon) {
-        if (pokemon.height >=0.6 && pokemon.height < 1) {
-            document.write(pokemon.name + " (height: " + pokemon.height + "m) - Is tall" + "<br>")
-        } else if (pokemon.height < 0.6) {
-            document.write(pokemon.name + "(height: " + pokemon.height + "m) - Is short" + "<br>")
-        } else {
-            document.write(pokemon.name + " (height: " + pokemon.height + "m) - Is really big" + "<br>")
-        }
-    });
-
     function add(pokemon) {
         if (
             typeof pokemon === "object" &&
@@ -45,7 +33,7 @@ function divide(dividend, divisor){
         ) {
             pokemonList.push(pokemon);
         } else {
-            console.log("pokemon is not correct);
+            console.log("pokemon is not correct");
         }
     }
 
@@ -57,7 +45,7 @@ function divide(dividend, divisor){
         let pokemonList = document.querySelector(".pokemon-list");
         let listpokemon = document.createElement("li");
         let button = document.createElement("button");
-        button.innerText = "pokemon.name";
+        button.innerText = pokemon.name;
         button.classList.add("button-class");
         listpokemon.appendChild(button);
         pokemonList.appendChild(listpokemon); 
@@ -109,7 +97,8 @@ function divide(dividend, divisor){
         getAll: getAll,
         loadList: loadList,
         loadDetails: loadDetails,
-        showDetails: showDetails
+        showDetails: showDetails,
+        addListItem: addListItem
     };
 }();
 
