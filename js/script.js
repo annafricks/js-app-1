@@ -50,9 +50,9 @@ function divide(dividend, divisor){
         listpokemon.appendChild(button);
         pokemonList.appendChild(listpokemon); 
     // listens for a button click and the logs to the console the details  
-      button.addEventListener("click"), function(Event) {
-        showDetails(pokemon);
-      }
+      button.addEventListener("click", function() {
+        showDetails(pokemon); //basically saying when the button is clicked, show the details of the pokemon
+      })
     }
 
     function loadList() {
@@ -106,7 +106,9 @@ function divide(dividend, divisor){
 pokemonRepository.loadList().then(function() {
     // Now the data is loaded!
     pokemonRepository.getAll().forEach(function(pokemon) {
-        document.write(pokemon.name + pokemon.height);
+        //document.write(pokemon.name + pokemon.height);
             pokemonRepository.addListItem(pokemon);
     });
 });
+
+
