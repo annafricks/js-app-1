@@ -56,31 +56,27 @@ function divide(dividend, divisor){
     }
 
     function loadList() {
-      showloadingMessage();
-        return fetch(apiUrl).then(function (response) {
-          return response.json();
-        }).then(function (json) {
-          hideLoadingMessage();
-          json.results.forEach(function (item) {
-            let pokemon = {
-              name: item.name,
-              detailsUrl: item.url
-            };
-            add(pokemon);
-            console.log(pokemon);
-          });
-        }).catch(function (e) {
-          console.error(e);
-        })
-      }
+     return fetch(apiUrl).then(function (response) {
+      return response.json();
+       }).then(function (json) {
+        json.results.forEach(function (item) {
+          let pokemon = {
+            name: item.name,
+            detailsUrl: item.url
+          };
+           add(pokemon);
+           console.log(pokemon);
+         });
+       }).catch(function (e) {
+        console.error(e);
+      })
+     }
 
       function loadDetails(item) {
-        showloadingMessage();
         let url = item.detailsUrl;
         return fetch(url).then(function (response) {
           return response.json();
         }).then(function (details) {
-          hideLoadingMessage();
           // Now we add the details to the item
           item.imageUrl = details.sprites.front_default;
           item.height = details.height;
@@ -115,5 +111,5 @@ pokemonRepository.loadList().then(function() {
     });
 });
 
-
-//Inside the add function, how can I be sure the typeof parameter is an object? In combination with a conditional, how can I make sure you can only add the passed argument of the function to pokemonList if it’s an object?
+//how to add define showLoadingMessage and hideLoadingMessage functions?
+//Inside the add function, how can I be sure the type of parameter is an object? In combination with a conditional, how can I make sure you can only add the passed argument of the function to pokemonList if it’s an object?
