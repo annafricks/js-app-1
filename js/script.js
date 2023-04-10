@@ -94,54 +94,42 @@ function divide(dividend, divisor){
 
     function showModal(item) {
       pokemonRepository.loadDetails(item).then(function () {
-        let modalTitle = document.querySelector('.modal-title');
 
-        modalTitle.innerText = item.name;
+        let modalTitle = document.querySelector(".modal-title");
+          modalTitle.innerText = item.name;
 
-        let imageContainer = document.querySelector('.image-container');
+        let imageContainer = document.querySelector(".image-container");
+        let pokemonImage = document.createElement("img");
+          pokemonImage.src = item.imageUrl;
+          pokemonImage.classList.add("pokemon-image");
+          imageContainer.innerHTML = "";
+          imageContainer.append(pokemonImage);
 
-        let pokemonImage = document.createElement('img');
+        let pokemonHeight = document.querySelector(".height");
+          pokemonHeight.innerText = "Height: " + item.height;
 
-        pokemonImage.src = item.imageUrl;
+        let modal = document.querySelector(".modal");
+          modal.classList.add("modal-is-visible");
+          modal.classList.remove("modal");
 
-        pokemonImage.classList.add('pokemon-image');
-
-        imageContainer.innerHTML = '';
-
-        imageContainer.append(pokemonImage);
-
-        let pokemonHeight = document.querySelector('.height');
-
-        pokemonHeight.innerText = 'Height: ' + item.height;
-
-        let modal = document.querySelector('.modal');
-
-        modal.classList.add('modal-is-visible');
-
-        modal.classList.remove('modal');
-
-        let buttonContainer = document.querySelector('#button-container');
-
-        let modalCloseButton = document.createElement('button');
-
-        modalCloseButton.classList.add('btn');
-
-        modalCloseButton.classList.add('modal-close');
-        modalCloseButton.innerText = 'x';
-        buttonContainer.innerHTML = '';
-      
+        let buttonContainer = document.querySelector("#button-container");
+        let modalCloseButton = document.createElement("button");
+        modalCloseButton.classList.add("btn");
+        modalCloseButton.classList.add("modal-close");
+        modalCloseButton.innerText = "x";
+        buttonContainer.innerHTML = "";
         buttonContainer.append(modalCloseButton);
       
-      modalCloseButton.addEventListener('click', function () {
+      modalCloseButton.addEventListener("click", function () {
         closeModal();
       });
     });
 
     function closeModal() {
-      let modalContainer = document.querySelector('#modal-container');
-      modalContainer.classList.remove('modal-is-visible');
-      modalContainer.classList.add('modal');
-      modalCloseButton.innerHTML = '';
+      let modalContainer = document.querySelector("#modal-container");
+      modalContainer.classList.remove("modal-is-visible");
+      modalContainer.classList.add("modal");
+      modalCloseButton.innerHTML = "";
     }
    }
 
@@ -151,7 +139,8 @@ function divide(dividend, divisor){
         loadList: loadList,
         loadDetails: loadDetails,
         showDetails: showDetails,
-        addListItem: addListItem
+        addListItem: addListItem,
+        showModal: showModal,
     };
 }();
 
