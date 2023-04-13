@@ -153,5 +153,4 @@ pokemonRepository.loadList().then(function() {
     });
 });
 
-//how to add define showLoadingMessage and hideLoadingMessage functions?
-//Inside the add function, how can I be sure the type of parameter is an object? In combination with a conditional, how can I make sure you can only add the passed argument of the function to pokemonList if it’s an object?
+//is line 112 correct? What function is it calling? 
