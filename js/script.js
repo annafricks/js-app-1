@@ -75,6 +75,7 @@ let pokemonRepository = function () {
             item.imageUrl = details.sprites.front_default;
             item.height = details.height;
             item.types = details.types;
+            showModal(item);
           }).catch(function (e) {
             console.error(e);
           });
@@ -98,9 +99,9 @@ let pokemonRepository = function () {
             modalTitle.innerText = item.name;
 
           let pokemonHeight = document.querySelector(".height");
-            pokemonHeight.innerText = "Height: " + item.height;
+            pokemonHeight.innerText = "Height: " + pokemon.height;
 
-            let pokemonImage = document.querySelector(".image-container");
+            let pokemonImage = document.querySelector(".pokemon-image");
             pokemonImage.src = item.imageUrl;
 
           let modal = document.querySelector(".modal");
@@ -147,3 +148,8 @@ let pokemonRepository = function () {
               pokemonRepository.addListItem(pokemon);
       });
   });
+
+  //image and height not working in the modal
+  //102 innerText on infinite loop.. happening when i click on a pokemon
+
+  //code working before Bootstrap is in GitHub as Modal function edited from null
