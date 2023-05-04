@@ -1,0 +1,6 @@
+@font-face {
+  src: url("./PocketMonk-15ze.ttf") format("truetype");
+  font-family: "PocketMonk";
+  font-style: normal; /* tells the browser to use the normal style if the requested style is not available */
+  font-weight: normal; /* tells the browser to use the normal style if the requested style is not available */
+}
