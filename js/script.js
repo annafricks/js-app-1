@@ -142,26 +142,33 @@ let pokemonRepository = (function () {
     modalCloseButton.innerHTML = "";
   }
 
-  // search for a pokemon
-  //searchInput.addEventListener("input", function () {
-  //pokemonRepository.filterSearch(searchInput);
-  // });
+  //search bar
+  function searchPokemon() {
+    let searchInput = document.getElementById("search-bar");
+    let searchText = searchInput.value.toLowerCase();
+    let allPokemon = document.querySelectorAll(".group-list-item");
 
-  //function filterSearch(searchInput) {
-  //let filterValue = searchInput.value.toLowerCase();
+    allPokemon.forEach(function (pokemon) {
+      let pokemonText = pokemon.querySelector(".btn").innerText.toLowerCase();
+      let searchList = document.querySelector(".pokemon-list");
 
-  // filter the pokemonList array based on the filterValue
-  //let filteredPokemon = pokemonList.filter(function (pokemon) {
-  //return pokemon.name.toLowerCase().indexOf(filterValue) > -1;
-  //});
+      if (pokemonText.includes(searchText)) {
+        searchList.classList.add("search-list");
+        pokemon.style.display = "inline-block";
+      } else {
+        pokemon.style.display = "none";
+      }
 
-  // update the displayed list of Pokemon based on the filtered results
-  //let pokemonListElement = document.querySelector(".pokemon-list");
-  //pokemonListElement.innerHTML = "";
-  //filteredPokemon.forEach(function (pokemon) {
-  //pokemonRepository.addListItem(pokemon);
-  // });
-  //}
+      if (!searchInput.value) {
+        searchList.classList.remove("search-list");
+      }
+    });
+  }
+
+  let searchInput = document.getElementById("search-bar");
+  searchInput.addEventListener("input", function () {
+    searchPokemon();
+  });
 
   return {
     add: add,
@@ -171,7 +178,7 @@ let pokemonRepository = (function () {
     showDetails: showDetails,
     addListItem: addListItem,
     showModal: showModal,
-    //filterSearch: filterSearch,
+    searchPokemon: searchPokemon,
   };
 })();
 
